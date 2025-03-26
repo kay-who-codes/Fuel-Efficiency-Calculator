@@ -17,7 +17,7 @@ folder_name=$(basename "$PWD")
 repo_name=$(echo "$folder_name" | tr ' ' '-')
 
 # Read the GitHub access token from file (removing any newlines)
-TOKEN=$(cat "A:/Programming/Access Tokens/Github Access Token - Repo.txt" | tr -d '\n')
+TOKEN=$(cat "A:/Programming/Access Tokens/Github Access Token - Repo n Workflow.txt" | tr -d '\n')
 
 # GitHub username and API endpoints
 USER="kay-who-codes"
