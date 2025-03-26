@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⛽️ Fuel Efficiency Calculator</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⛽️ Fuel Efficiency Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Fuel Efficiency Calculator</h1>
-        
-        <div class="input-group">
-            <label for="tankSize">Tank Size (litres)</label>
-            <input type="number" id="tankSize" placeholder="Enter tank size">
-        </div>
-        
-        <div class="input-group">
-            <label for="fillCost">Cost to Fill (£)</label>
-            <input type="number" id="fillCost" placeholder="Enter cost">
-        </div>
-        
-        <div class="input-group">
-            <label for="milesPerTank">Miles per Tank</label>
-            <input type="number" id="milesPerTank" placeholder="Enter miles">
-        </div>
-        
-        <div class="results">
-            <div class="result-card">
-                <h3>Cost per Mile</h3>
-                <p id="costPerMile">-</p>
-            </div>
-            
-            <div class="result-card">
-                <h3>Miles per Litre</h3>
-                <p id="milesPerLitre">-</p>
-            </div>
-            
-            <div class="result-card">
-                <h3>Litres per 100 Miles</h3>
-                <p id="litresPer100Miles">-</p>
-            </div>
-            
-            <div class="result-card">
-                <h3>Cost per 100 Miles</h3>
-                <p id="costPer100Miles">-</p>
-            </div>
-        </div>
+    <div id="header"></div>
+  <div class="container">
+    <h1>Fuel Efficiency</h1>
+    <p class="subtitle">Calculate your vehicle's fuel economy metrics</p>
+
+    <div class="input-group">
+      <label for="tank-size">Fuel Tank Size (litres):</label>
+      <input type="number" id="tank-size" min="0" step="0.1" placeholder="e.g. 50">
     </div>
 
-    <script src="js/app.js"></script>
+    <div class="input-group">
+      <label for="fill-cost">Cost to Fill Tank (£):</label>
+      <input type="number" id="fill-cost" min="0" step="0.01" placeholder="e.g. 80">
+    </div>
+
+    <div class="input-group">
+      <label for="miles-per-tank">Miles per Tank:</label>
+      <input type="number" id="miles-per-tank" min="0" step="1" placeholder="e.g. 400">
+    </div>
+
+    <div class="output">
+      <div class="output-section">
+        <h2><span class="icon">📊</span> Mileage</h2>
+        <p>Miles Per Gallon: <span class="result" id="mpg"></span></p>
+        <p>Miles Per Litre: <span class="result" id="miles-per-litre"></span></p>
+        <p>Miles Per 100 Litres: <span class="result" id="miles-per-100-litres"></span></p>
+        <p>Miles Per £10: <span class="result" id="miles-per-10"></span></p>
+        <p>Miles Per £100: <span class="result" id="miles-per-100"></span></p>
+      </div>
+
+      <div class="output-section">
+        <h2><span class="icon">💷</span> Cost</h2>
+        <p>Cost per Litre (£): <span class="result" id="cost-per-litre"></span></p>
+        <p>Cost per 100 Litres (£): <span class="result" id="cost-per-100-litres"></span></p>
+        <p>Cost per Mile (£): <span class="result" id="cost-per-mile"></span></p>
+        <p>Cost per 100 Miles (£): <span class="result" id="cost-per-100-miles"></span></p>
+      </div>
+
+      <div class="output-section">
+        <h2><span class="icon">⛽</span> Fuel</h2>
+        <p>Litres Per £100: <span class="result" id="litres-per-100"></span></p>
+        <p>Litres Per Mile: <span class="result" id="litres-per-mile"></span></p>
+        <p>Litres Per 100 Miles: <span class="result" id="litres-per-100-miles"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>
